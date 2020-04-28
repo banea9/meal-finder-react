@@ -1,0 +1,29 @@
+.meal {
+    width: 180px;
+    height: 180px;
+    position: relative;
+    border: 4px solid #fff;
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.meal-info {
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+.meal:hover .meal-info {
+    display: flex;
+}
