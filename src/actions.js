@@ -20,7 +20,7 @@ export const setSearchField = text => {
 
 export const requestMeal = () => dispatch => {
   dispatch({ type: REQUEST_MEAL_PENDING });
-  fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=`)
+  fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${PARAMETER_SHOULD_BE_USED_HERE}`)
     .then(resp => resp.json())
     .then(data => {
       console.log(data);
