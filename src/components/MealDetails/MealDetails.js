@@ -6,12 +6,20 @@ const MealDetails = ({ mealDetails }) => {
     <div className="tc meal-desc">
       <h1 className="f2">{mealDetails.name}</h1>
       <img src={mealDetails.photoSrc} width="350px" height="350px" alt="asd" />
-      <div className="desc tc ph4 pv3 br3 ba b--dashed bw2">
-        <h2 className="f3">{mealDetails.category}</h2>
-        <h4 className="f3">{mealDetails.area}</h4>
+      <div className="desc tc f3 ph4 pv3 br3 ba b--dashed bw2">
+        <h2>{mealDetails.category}</h2>
+        <h4>{mealDetails.area}</h4>
+        <a
+          href={mealDetails.video}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: "none", color: "#fff" }}
+        >
+          Video
+        </a>
       </div>
       <div className="instructions f4">{mealDetails.instructions}</div>
-      <Ingredients ingredients={mealDetails.ingredients}/>
+      <Ingredients ingredients={mealDetails.ingredients} />
     </div>
   );
 };

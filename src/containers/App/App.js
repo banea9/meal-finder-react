@@ -4,39 +4,47 @@ import InputForm from "../../components/InputForm/InputForm";
 import SearchValueParagraph from "../../components/SearchValueParagraph/SearchValueParagraph";
 import MealGrid from "../../components/MealGrid/MealGrid";
 import MealDetails from "../../components/MealDetails/MealDetails";
+import { connect } from "react-redux";
+import { setSearchField, requestRandomMeal, requestMeal } from "../../actions";
 import "./App.css";
+
+const mapStateToPros = state => {
+  return {
+    searchField: state.searchMeals.searchField,
+    meals: state.requestRandomMeal.meals,
+    isPending: state.requestRandomMeal.isPending,
+    error: state.requestRandomMeal.error
+  };
+};
+
+const mapDispatchToProps = dispatch => ({
+  onSearchChange: event => dispatch(setSearchField(event.target.value)),
+  onRequestMeal: text => dispatch(requestMeal()),
+  onRequestRandomMeal: () => dispatch(requestRandomMeal())
+});
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      searchField: "",
-      meals: [],
       meal: {}
     };
   }
 
-  onSearchChange = event => {
-    this.setState({ searchField: event.target.value });
-  };
-
   onMealSearch = () => {
-    fetch(
-      `https://www.themealdb.com/api/json/v1/1/search.php?s=${this.state.searchField}`
-    )
-      .then(resp => resp.json())
-      .then(data => {
-        this.setState({ meals: data.meals });
-      })
-      .catch(err => console.log(err));
+    // fetch(
+    //   `https://www.themealdb.com/api/json/v1/1/search.php?s=${this.props.searchField}`
+    // )
+    //   .then(resp => resp.json())
+    //   .then(data => {
+    //     this.setState({ meals: data.meals, meal: {} });
+    //   })
+    //   .catch(err => console.log("Error on meal search"));
+    this.props.onRequestMeal(this.props.searchField);
   };
 
   onRandomSearch = () => {
-    fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
-      .then(resp => resp.json())
-      .then(data => {
-        this.setState({ meals: data.meals });
-      });
+    this.props.onRequestRandomMeal();
   };
 
   viewMealDetails = event => {
@@ -61,30 +69,37 @@ class App extends Component {
             area: data.meals[0].strArea,
             photoSrc: data.meals[0].strMealThumb,
             instructions: data.meals[0].strInstructions,
-            ingredients: ingredientsArr
+            ingredients: ingredientsArr,
+            video: data.meals[0].strYoutube
           }
         });
-      });
+      })
+      .catch(err => console.log("Error on view meal details event"));
   };
 
   render() {
+    const {
+      searchField,
+      onSearchChange,
+      meals,
+      onRequestRandomMeal
+    } = this.props;
     return (
       <div className="App">
         <Header />
         <InputForm
-          onSearchChange={this.onSearchChange}
+          onSearchChange={onSearchChange}
           onMealSearch={this.onMealSearch}
-          onRandomSearch={this.onRandomSearch}
+          onRandomSearch={onRequestRandomMeal}
         />
-        <SearchValueParagraph />
-        <MealGrid
-          meals={this.state.meals}
-          viewMealDetails={this.viewMealDetails}
-        />
-        <MealDetails mealDetails={this.state.meal} />
+        <SearchValueParagraph searchValue={searchField} meals={meals} />
+        <MealGrid meals={meals} viewMealDetails={this.viewMealDetails} />
+        {this.state.meal.name !== undefined ? (
+          <MealDetails mealDetails={meals} />
+        ) : null}
       </div>
     );
   }
 }
 
-export default App;
+export default connect(mapStateToPros, mapDispatchToProps)(App);

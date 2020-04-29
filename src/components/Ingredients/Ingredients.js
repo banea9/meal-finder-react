@@ -6,8 +6,18 @@ const Ingredients = ({ ingredients }) => {
     ingredientsList = ingredients.map((ing, i) => {
       let [ingr, amount] = ing.split(" - ");
       return (
-        <li className="list-item" key={i}>
-          ${ingr}: ${amount}
+        <li
+          className="list-item br3 bn"
+          style={{
+            display: "inline-block",
+            margin: "3px",
+            padding: "3px 5px",
+            backgroundColor: "#fff",
+            color: "#000"
+          }}
+          key={i}
+        >
+          {ingr}: {amount}
         </li>
       );
     });
@@ -15,7 +25,12 @@ const Ingredients = ({ ingredients }) => {
 
   return (
     <div>
-      <ul>{ingredientsList}</ul>
+      <ul
+        className="mv3"
+        style={{ width: "70%", listStyle: "none", margin: "10px auto" }}
+      >
+        {ingredientsList}
+      </ul>
     </div>
   );
 };
