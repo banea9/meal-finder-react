@@ -18,18 +18,18 @@ export const setSearchField = text => {
   };
 };
 
-export const requestMeal = (meal) => dispatch => {
+export const requestMeal = () => (dispatch, getState) => {
+  const { searchField } = getState().searchMeals
   dispatch({ type: REQUEST_MEAL_PENDING });
-  fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${meal}`)
+  fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchField}`)
     .then(resp => resp.json())
     .then(data => {
-      console.log(data);
       dispatch({ type: REQUEST_MEAL_SUCCESS, payload: data.meals });
     })
     .catch(err => dispatch({ type: REQUEST_MEAL_FAILED, payload: err }));
 };
 
-export const requestRandomMeal = () => dispatch => {
+export const requestRandomMeal = () => (dispatch, getState) => {
   dispatch({ type: REQUEST_RANDOM_MEAL_PENDING });
   fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
     .then(resp => resp.json())

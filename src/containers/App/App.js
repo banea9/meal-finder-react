@@ -16,14 +16,15 @@ import "./App.css";
 const mapStateToPros = state => {
   return {
     searchField: state.searchMeals.searchField,
-    meals: state.requestRandomMeal.meals,
-    isPending: state.requestRandomMeal.isPending,
-    error: state.requestRandomMeal.error,
+    meals: state.requestMeal.meals,
+    randomMeal: state.requestMeal.randomMeal,
+    isPending: state.requestMeal.isPending,
+    error: state.requestMeal.error,
     meal: state.requestViewMeal.meal
   };
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
     onSearchChange: event => dispatch(setSearchField(event.target.value)),
     onRequestMeal: () => dispatch(requestMeal()),
@@ -34,10 +35,6 @@ const mapDispatchToProps = dispatch => {
 };
 
 class App extends Component {
-  
-  onMealSearch = () => {
-    this.props.onRequestMeal(this.props.searchField);
-  };
 
   render() {
     const {
@@ -54,7 +51,7 @@ class App extends Component {
         <Header />
         <InputForm
           onSearchChange={onSearchChange}
-          onMealSearch={() => onRequestMeal(searchField)}
+          onMealSearch={onRequestMeal}
           onRandomSearch={onRequestRandomMeal}
         />
         <SearchValueParagraph searchValue={searchField} meals={meals} />

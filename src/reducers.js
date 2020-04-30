@@ -11,6 +11,8 @@ import {
   REQUEST_VIEW_MEAL_SUCCESS
 } from "./constants";
 
+//reducer and inital state for setSearchField action
+
 const initalStateSearch = {
   searchField: ""
 };
@@ -23,6 +25,8 @@ export const searchMeals = (state = initalStateSearch, action = {}) => {
       return state;
   }
 };
+
+// reducer and initia; state for requestMeal action
 
 const initalStateRequestMeal = {
   isPending: false,
@@ -44,16 +48,6 @@ export const requestMeal = (state = initalStateRequestMeal, action = {}) => {
         isPending: false,
         error: action.error
       });
-    default:
-      return state;
-  }
-};
-
-export const requestRandomMeal = (
-  state = initalStateRequestMeal,
-  action = {}
-) => {
-  switch (action.type) {
     case REQUEST_RANDOM_MEAL_PENDING:
       return Object.assign({}, state, { isPending: true });
     case REQUEST_RANDOM_MEAL_SUCCESS:
@@ -71,6 +65,37 @@ export const requestRandomMeal = (
   }
 };
 
+//reducer and inital state for the requestRandomMeal action
+
+// const initalStateRandomMeal = {
+//   isPending: false,
+//   randomMeal: [],
+//   error: ""
+// };
+// export const requestRandomMeal = (
+//   state = initalStateRandomMeal,
+//   action = {}
+// ) => {
+//   switch (action.type) {
+//     case REQUEST_RANDOM_MEAL_PENDING:
+//       return Object.assign({}, state, { isPending: true });
+//     case REQUEST_RANDOM_MEAL_SUCCESS:
+//       return Object.assign({}, state, {
+//         isPending: false,
+//         meals: action.payload
+//       });
+//     case REQUEST_RANDOM_MEAL_FAILED:
+//       return Object.assign({}, state, {
+//         isPending: false,
+//         error: action.error
+//       });
+//     default:
+//       return state;
+//   }
+// };
+///////////
+
+//reducer and initalstate for the requestViewMeal action
 const initalStateViewMeal = {
   meal: {},
   isPending: false

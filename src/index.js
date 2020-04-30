@@ -10,7 +10,6 @@ import * as serviceWorker from "./serviceWorker";
 import "tachyons";
 import {
   searchMeals,
-  requestRandomMeal,
   requestMeal,
   requestViewMeal
 } from "./reducers";
@@ -18,11 +17,10 @@ import {
 const logger = createLogger();
 const rootReducer = combineReducers({
   searchMeals,
-  requestRandomMeal,
   requestMeal,
   requestViewMeal
 });
-const store = createStore(
+export const store = createStore(
   rootReducer,
   applyMiddleware(thunkMiddleware, logger)
 );
