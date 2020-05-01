@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/meal-finder-react/precache-manifest.ae82a33c1eccf6214ca9d4d9e0a5a18e.js"
+  "/meal-finder-react/precache-manifest.b9c2087ce571b538e4659a865234eb84.js"
 );
 
 self.addEventListener('message', (event) => {

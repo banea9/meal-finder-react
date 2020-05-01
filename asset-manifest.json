@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/meal-finder-react/static/css/main.08c4aad1.chunk.css",
-    "main.js": "/meal-finder-react/static/js/main.c18f0934.chunk.js",
-    "main.js.map": "/meal-finder-react/static/js/main.c18f0934.chunk.js.map",
+    "main.js": "/meal-finder-react/static/js/main.f53cac95.chunk.js",
+    "main.js.map": "/meal-finder-react/static/js/main.f53cac95.chunk.js.map",
     "runtime-main.js": "/meal-finder-react/static/js/runtime-main.34c5a616.js",
     "runtime-main.js.map": "/meal-finder-react/static/js/runtime-main.34c5a616.js.map",
     "static/css/2.036b41f9.chunk.css": "/meal-finder-react/static/css/2.036b41f9.chunk.css",
     "static/js/2.919f3389.chunk.js": "/meal-finder-react/static/js/2.919f3389.chunk.js",
     "static/js/2.919f3389.chunk.js.map": "/meal-finder-react/static/js/2.919f3389.chunk.js.map",
     "index.html": "/meal-finder-react/index.html",
-    "precache-manifest.ae82a33c1eccf6214ca9d4d9e0a5a18e.js": "/meal-finder-react/precache-manifest.ae82a33c1eccf6214ca9d4d9e0a5a18e.js",
+    "precache-manifest.b9c2087ce571b538e4659a865234eb84.js": "/meal-finder-react/precache-manifest.b9c2087ce571b538e4659a865234eb84.js",
     "service-worker.js": "/meal-finder-react/service-worker.js",
     "static/css/2.036b41f9.chunk.css.map": "/meal-finder-react/static/css/2.036b41f9.chunk.css.map",
     "static/css/main.08c4aad1.chunk.css.map": "/meal-finder-react/static/css/main.08c4aad1.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.036b41f9.chunk.css",
     "static/js/2.919f3389.chunk.js",
     "static/css/main.08c4aad1.chunk.css",
-    "static/js/main.c18f0934.chunk.js"
+    "static/js/main.f53cac95.chunk.js"
   ]
 }
