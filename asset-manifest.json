@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/meal-finder-react/static/css/main.0bd360d8.chunk.css",
-    "main.js": "/meal-finder-react/static/js/main.02b4dcf7.chunk.js",
-    "main.js.map": "/meal-finder-react/static/js/main.02b4dcf7.chunk.js.map",
+    "main.css": "/meal-finder-react/static/css/main.08c4aad1.chunk.css",
+    "main.js": "/meal-finder-react/static/js/main.c18f0934.chunk.js",
+    "main.js.map": "/meal-finder-react/static/js/main.c18f0934.chunk.js.map",
     "runtime-main.js": "/meal-finder-react/static/js/runtime-main.34c5a616.js",
     "runtime-main.js.map": "/meal-finder-react/static/js/runtime-main.34c5a616.js.map",
     "static/css/2.036b41f9.chunk.css": "/meal-finder-react/static/css/2.036b41f9.chunk.css",
     "static/js/2.919f3389.chunk.js": "/meal-finder-react/static/js/2.919f3389.chunk.js",
     "static/js/2.919f3389.chunk.js.map": "/meal-finder-react/static/js/2.919f3389.chunk.js.map",
     "index.html": "/meal-finder-react/index.html",
-    "precache-manifest.1b40be74390a4e07e5398e80040b4f63.js": "/meal-finder-react/precache-manifest.1b40be74390a4e07e5398e80040b4f63.js",
+    "precache-manifest.a3107467e1020e45ee62d4431822804a.js": "/meal-finder-react/precache-manifest.a3107467e1020e45ee62d4431822804a.js",
     "service-worker.js": "/meal-finder-react/service-worker.js",
     "static/css/2.036b41f9.chunk.css.map": "/meal-finder-react/static/css/2.036b41f9.chunk.css.map",
-    "static/css/main.0bd360d8.chunk.css.map": "/meal-finder-react/static/css/main.0bd360d8.chunk.css.map",
+    "static/css/main.08c4aad1.chunk.css.map": "/meal-finder-react/static/css/main.08c4aad1.chunk.css.map",
     "static/js/2.919f3389.chunk.js.LICENSE.txt": "/meal-finder-react/static/js/2.919f3389.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.34c5a616.js",
     "static/css/2.036b41f9.chunk.css",
     "static/js/2.919f3389.chunk.js",
-    "static/css/main.0bd360d8.chunk.css",
-    "static/js/main.02b4dcf7.chunk.js"
+    "static/css/main.08c4aad1.chunk.css",
+    "static/js/main.c18f0934.chunk.js"
   ]
 }

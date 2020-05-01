@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9de19ac1180417a6d41374ef450450ba",
+    "revision": "80bfab0279775ad1d4e8298f1659c785",
     "url": "/meal-finder-react/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/meal-finder-react/static/css/2.036b41f9.chunk.css"
   },
   {
-    "revision": "a6ed779025522291c525",
-    "url": "/meal-finder-react/static/css/main.0bd360d8.chunk.css"
+    "revision": "141587657d0a9bf40c5c",
+    "url": "/meal-finder-react/static/css/main.08c4aad1.chunk.css"
   },
   {
     "revision": "140bdea184989a4408e6",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/meal-finder-react/static/js/2.919f3389.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "a6ed779025522291c525",
-    "url": "/meal-finder-react/static/js/main.02b4dcf7.chunk.js"
+    "revision": "141587657d0a9bf40c5c",
+    "url": "/meal-finder-react/static/js/main.c18f0934.chunk.js"
   },
   {
     "revision": "03d7af172b95e4dc7c7c",
