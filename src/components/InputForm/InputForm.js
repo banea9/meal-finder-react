@@ -4,16 +4,27 @@ const InputForm = ({ onSearchChange, onMealSearch, onRandomSearch }) => {
   return (
     <div className="container">
       <div className="search">
+        <label for="searchInput"></label>
         <input
+          id="searchInput"
           onChange={onSearchChange}
           type="text"
           placeholder="Search for meals"
         />
-        <button onClick={onMealSearch} className="search-btn">
+
+        <button
+          aria-label="search-btn"
+          onClick={onMealSearch}
+          className="search-btn"
+        >
           <i className="fas fa-search"></i>
         </button>
       </div>
-      <button onClick={onRandomSearch} className="random-btn">
+      <button
+        aria-label="random-btn"
+        onClick={onRandomSearch}
+        className="random-btn"
+      >
         <i className="fas fa-random"></i>
       </button>
     </div>
