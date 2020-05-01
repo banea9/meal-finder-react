@@ -4,8 +4,8 @@ const InputForm = ({ onSearchChange, onMealSearch, onRandomSearch }) => {
   return (
     <div className="container">
       <div className="search">
-        <label for="searchInput">Search for meal</label>
         <input
+          aria-label="Searching Meals"
           id="searchInput"
           onChange={onSearchChange}
           type="text"
