@@ -4,7 +4,7 @@ const InputForm = ({ onSearchChange, onMealSearch, onRandomSearch }) => {
   return (
     <div className="container">
       <div className="search">
-        <label for="searchInput"></label>
+        <label for="searchInput">Search for meal</label>
         <input
           id="searchInput"
           onChange={onSearchChange}

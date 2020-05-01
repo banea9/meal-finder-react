@@ -1,7 +1,9 @@
 .container {
     display: flex;
 }
-
+label {
+    display: none;
+}
 .search {
     display: flex;
     width: 300px;
